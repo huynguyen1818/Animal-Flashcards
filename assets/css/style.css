@@ -1,0 +1,457 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: "Fira Sans", sans-serif;
+    font-size: 1.4rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    height: 100%;
+    background-image: url("https://wallpaperaccess.com/full/3665287.jpg");
+    background-repeat: repeat-y;
+    background-size: cover;
+}
+
+#loginBtn, #signupBtn, #logoutBtn, #favorBtn, #changeThemeBtn {
+    font-size: 0.9rem;
+    color: black;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#loginBtn:hover, #signupBtn:hover, #logoutBtn:hover, #favorBtn:hover, #changeThemeBtn:hover {
+    color: white;
+}
+
+#welcomeMessage {
+    font-size: 0.9rem !important;
+    color: black;
+}
+
+.modal *:not(.modal-header *) {
+    font-size: 1rem !important;
+}
+
+.main-row {
+    margin-top: 3.2rem;
+}
+
+.scene {
+    display: inline-block;
+    width: 100%;
+    height: 260px;
+    perspective: 600px;
+}
+
+.card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transform-style: preserve-3d;
+    transform-origin: center right;
+    transition: transform 1s;
+}
+
+.phonetic {
+    font-size: 22px;
+    min-height: 33px;
+}
+
+.card.is-flipped {
+    transform: translateX(-100%) rotateY(-180deg);
+}
+
+.card__face {
+    box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.2),
+        0 10px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 10px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+    overflow: hidden;
+}
+
+.card__face--back {
+    padding: 20px;
+    background-color: white;
+    transform: rotateY(180deg);
+    position: relative;
+}
+
+.card__img {
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.name {
+    font-family: "Luckiest Guy", cursive;
+    font-size: 3rem;
+}
+
+.text {
+    font-family: "Twinkle Star", cursive;
+    font-size: 2rem;
+}
+
+/* .instruction {
+    background-color: rgb(207, 233, 183, 0.5);
+    color: black;
+    padding: 5px 0px;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.fa-hand-o-up {
+    padding: 0 5px;
+    font-size: 0.7rem;
+} */
+
+.icon {
+    margin: 5px 0px 20px;
+    width: 3.2rem;
+    background-color: rgb(207, 233, 183);
+    color: black;
+    padding: 5px 12px;
+    border: 0px;
+    border-radius: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.icon:hover {
+    color: brown;
+    /* background-color: green;
+    color: white; */
+}
+
+.change-card {
+    transform: translateY(-8%);
+    line-height: 2.5rem;
+    border: 1px solid white !important;
+    box-shadow: 0 0 18px rgba(255, 255, 255, 0.7);
+}
+
+.liked {
+    color: brown;
+}
+
+.body-wrapper .sidebar {
+    padding: 0;
+/*     background-color: rgba(255, 255, 255, 0.8); */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    height: 100%;
+    position: relative;
+    /* display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 1.5fr repeat(3, 1fr); */
+}
+
+.sidebar-mountain {
+    background-color: rgba(207 233 183 / 78%);
+}
+
+.sidebar-mountain .nav-link {
+    color: #111;
+}
+
+.sidebar-mountain .active {
+    background-color: green !important;
+}
+
+.sidebar-sea {
+    background-color: rgba(255, 255, 255, 0.8); 
+}
+
+.btn-disabled {
+    opacity: 0.2;
+    user-select: none;
+    cursor: default !important;
+}
+
+.btn-disabled:hover {
+    color: black;
+}
+
+
+.loading__modal {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+    z-index: 99;
+}
+
+@keyframes ldio-c3a83pepd0q {
+    0% { 
+        transform: rotate(0) 
+    }
+    100% { 
+        transform: rotate(360deg)
+    }
+}
+
+.ldio-c3a83pepd0q div { 
+    box-sizing: border-box!important 
+}
+
+.ldio-c3a83pepd0q > div {
+    position: absolute;
+    width: 131.76px;
+    height: 131.76px;
+    top: 25.62px;
+    left: 25.62px;
+    border-radius: 50%;
+    border: 14.64px solid #000;
+    border-color: #c8e690 transparent #c8e690 transparent;
+    animation: ldio-c3a83pepd0q 0.970873786407767s linear infinite;
+}
+  
+.ldio-c3a83pepd0q > div:nth-child(2), 
+.ldio-c3a83pepd0q > div:nth-child(4) {
+    width: 98.82000000000001px;
+    height: 98.82000000000001px;
+    top: 42.09px;
+    left: 42.09px;
+    animation: ldio-c3a83pepd0q 0.970873786407767s linear infinite reverse;
+}
+
+.ldio-c3a83pepd0q > div:nth-child(2) {
+    border-color: transparent #042a2d transparent #042a2d
+}
+
+.ldio-c3a83pepd0q > div:nth-child(3) { 
+    border-color: transparent 
+}
+
+.ldio-c3a83pepd0q > div:nth-child(3) div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(45deg);
+}
+
+.ldio-c3a83pepd0q > div:nth-child(3) div:before, 
+.ldio-c3a83pepd0q > div:nth-child(3) div:after { 
+    content: "";
+    display: block;
+    position: absolute;
+    width: 14.64px;
+    height: 14.64px;
+    top: -14.64px;
+    left: 43.92px;
+    background: #c8e690;
+    border-radius: 50%;
+    box-shadow: 0 117.12px 0 0 #c8e690;
+}
+
+.ldio-c3a83pepd0q > div:nth-child(3) div:after {
+    left: -14.64px;
+    top: 43.92px;
+    box-shadow: 117.12px 0 0 0 #c8e690;
+}
+  
+.ldio-c3a83pepd0q > div:nth-child(4) { 
+    border-color: transparent; 
+}
+
+.ldio-c3a83pepd0q > div:nth-child(4) div {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: rotate(45deg);
+}
+
+.ldio-c3a83pepd0q > div:nth-child(4) div:before, 
+.ldio-c3a83pepd0q > div:nth-child(4) div:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 14.64px;
+    height: 14.64px;
+    top: -14.64px;
+    left: 27.450000000000003px;
+    background: #042a2d;
+    border-radius: 50%;
+    box-shadow: 0 84.18px 0 0 #042a2d;
+}
+
+.ldio-c3a83pepd0q > div:nth-child(4) div:after {
+    left: -14.64px;
+    top: 27.450000000000003px;
+    box-shadow: 84.18px 0 0 0 #042a2d;
+}
+
+.loadingio-spinner-double-ring {
+    width: 183px;
+    height: 183px;
+    display: inline-block;
+    overflow: hidden;
+    background: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+}
+
+.ldio-c3a83pepd0q {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform: translateZ(0) scale(1);
+    backface-visibility: hidden;
+    transform-origin: 0 0;
+}
+
+.ldio-c3a83pepd0q div { 
+    box-sizing: content-box; 
+}
+
+/* Trang Favorite*/
+
+div.list-card {
+    width: 750px;
+    max-height: 450px;
+    border-radius: 10px;
+    text-align: center;
+    padding: 10px 0 0 0 !important;
+    background-color: rgb(207, 233, 183);
+    align-items: center;
+    /* justify-content: center; */
+    overflow-y: auto;
+}
+
+#grid-cards {
+    background-color: white;
+    width: 100%;
+    border-radius: 10px;
+}
+
+th, td {
+    padding: 10px;
+}
+
+h3 {
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.menu__icon-wrapper {
+    position: relative;
+}
+
+.menu__icon {
+    position: absolute;
+    top: 50%;
+    cursor: pointer;
+}
+
+.nav-link i {
+    min-width: 22px;
+    font-size: 22px;
+}
+
+.nav-item__text {
+    display: none;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.full-sidebar .nav-item__text {
+    display: inline-block;
+}
+
+.nav-item[title = "Đổi theme"] {
+    display: none;
+}
+
+.full-sidebar .nav-item[title = "Đổi theme"] {
+    display: block;
+}
+
+#theme__checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.theme__bar {
+    --width: 66px;
+    width: var(--width);
+    height: 32px;
+    padding: 5px;
+    background-color: #c9e791;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    border-radius: var(--width);
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+    transition: all .2s linear;
+}
+
+.full-sidebar .theme__bar {
+    display: flex;
+}
+
+.theme__bar i {
+    font-size: 15px;
+}
+
+.theme__bar .ball {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background-color: #808080;
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    transition: all .25s ease;
+}
+
+.full-sidebar .copyright {
+    display: block;
+}
+
+.copyright {
+    display: none;
+}
+
+.copyright p {
+    font-size: 12px;
+    color: #717171;
+}
+
+.sidebar__change-size-btn {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translate(50%, -50%);
+    cursor: pointer;
+}
+
+.sidebar__change-size-btn i {
+    font-size: 25px;
+    z-index: 99;
+}
